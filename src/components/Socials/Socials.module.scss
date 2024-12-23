@@ -1,0 +1,46 @@
+@import '../../variables/variables.scss';
+
+.socials {
+    margin-right: 6%;
+    position: relative;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    &__item {
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+        border-radius: 50%;
+        width: fit-content;
+        background-color: $main_color;
+    }
+    &__icon {
+        width: 30px;
+    }
+    &:before {
+        display: block;
+        position: absolute;
+        content: '';
+        width: 70%;
+        height: 2px;
+        background-color: $main_color;
+        left: 0;
+    }
+}
+
+// Media Queries 
+@media screen and (max-width: 992px) {
+    .socials {
+        justify-content: center;
+        margin-right: 0;
+        &::before {
+            display: none;
+        }
+    }
+}

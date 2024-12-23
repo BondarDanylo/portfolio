@@ -1,5 +1,11 @@
 .wrapper {
     display: flex;
-    align-items: center;
     min-height: 100vh;
+}
+
+// Media Queries
+@media screen and (max-width: 575px) {
+    .wrapper {
+        display: block;
+    }
 }

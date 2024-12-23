@@ -1,11 +1,8 @@
 import React, { FC, JSX } from "react";
 import styles from './NavigationLink.module.scss';
+import IChildrenProps from '../../interfaces/IChildrenProps';
 
-interface NavigationLinkProps {
-    children: JSX.Element;
-}
-
-const NavigationLink: FC<NavigationLinkProps> = ({children}): JSX.Element => {
+const NavigationLink: FC<IChildrenProps> = ({children}): JSX.Element => {
 
     const styledChildren = (elem: JSX.Element) => {
         return elem = React.cloneElement(children, {

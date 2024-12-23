@@ -13,16 +13,40 @@ body {
     line-height: 1.5rem;
     color: $white_color;
     min-height: 100vh;
+    background-color: $black_color;
 }
-.container {
-    max-width: 1240px;
-    padding: 20px 0;
+main {
+    min-height: 100vh;
+    padding: 50px;
     width: 100%;
-    margin: 0 auto;
+    display: flex;
+}
+.title {
+    font-size: $title_size;
+    font-weight: 700;
 }
 a {
     text-decoration: none;
 }
 ul {
     list-style: none;
+}
+
+
+// Media Queries
+@media screen and (max-width: 1300px) {
+    .title {
+        line-height: 1em;
+        font-size: 60px;
+    }
+}
+@media screen and (max-width: 992px) {
+    .main {
+        padding: 50px 20px;
+    }
+}
+@media screen and (max-width: 575px) {
+    .title {
+        font-size: 40px;
+    }
 }

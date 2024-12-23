@@ -1,0 +1,75 @@
+@import '../../variables/variables.scss';
+
+.home {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+.wrapper {
+    width: fit-content;
+}
+.text {
+    font-size: $big_text_size;
+    line-height: 48px;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-right: 50px;
+    span {
+        color: $main_color;
+    }
+}
+.photo {
+    max-width: 350px;
+    border-radius: $big_border_radius;
+    box-shadow: -10px 10px 15px  rgb(50, 50, 59);
+    transform: scaleX(-1);
+}
+
+
+// Media Queries
+@media screen and (max-width: 1300px) {
+    .text {
+        line-height: 32px;
+        font-size: $normal_text_size;
+    }
+}
+@media screen and (max-width: 992px) {
+    .content {
+        flex-direction: column;
+        & a {
+            margin: 30px auto;
+        }
+    }
+    .wrapper {
+        text-align: center;
+    }
+    .text {
+        margin-right: 0;
+    }
+    .photo {
+        max-width: 300px;
+    }
+}
+@media screen and (max-width: 575px) {
+    .text {
+        font-size: $small_text_size;
+        margin-top: 20px;
+    }
+    .content {
+        margin-bottom: 20px;
+        & a {
+            margin: 20px auto;
+        }
+    }
+    .photo {
+        max-width: 250px;
+    }
+}
