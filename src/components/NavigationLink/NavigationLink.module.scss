@@ -1,0 +1,21 @@
+@import '../../variables/variables.scss';
+
+.menu__item {
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu__icon {
+    width: 40px;
+    height: 40px;
+}
+.menu-active {
+    background-color: $black_color;
+    & path {
+        fill: $white_color  ;
+    }
+}

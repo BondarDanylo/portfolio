@@ -1,0 +1,15 @@
+@import '../../variables/variables.scss';
+
+.navigation {
+    width: 80px;
+    background-color: $main_color;
+    min-height: 100vh;
+}
+.menu {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
