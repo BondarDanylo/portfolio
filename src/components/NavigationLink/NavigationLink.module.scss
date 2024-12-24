@@ -2,8 +2,10 @@
 
 .menu__item {
     cursor: pointer;
-    width: 100%;
-    text-align: center;
+}
+.menu__link {
+    display: block;
+    width: 80px;
     height: 80px;
     display: flex;
     align-items: center;

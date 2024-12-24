@@ -1,13 +1,22 @@
 import { FC, JSX } from "react";
-import IChildrenProps from "../../interfaces/IChildrenProps";
+import { Link } from "react-router";
+import IButton from "../../interfaces/IButton";
 import styles from './Button.module.scss';
 
-const Button: FC<IChildrenProps> = ({children}): JSX.Element => {
-    return(
-        <a href="#" className={styles.button}>
-            {children}
-        </a>
-    )
+const Button: FC<IButton> = ({link, children, to, isLocalLink}): JSX.Element => {
+    if(isLocalLink && typeof(to)=== 'string') {
+        return(
+            <Link to={to} className={styles.button}>
+                {children}
+            </Link>
+        )
+    }else {
+        return(
+            <a href={link} className={styles.button} target="_blank">
+                {children}
+            </a>
+        )
+    }
 }
 
 export default Button

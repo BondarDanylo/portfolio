@@ -20,7 +20,7 @@ const Home: FC = ():JSX.Element => {
                             and <span>creating</span> custom UI elements.
                             Implement your idea so quickly and without problems, let's get started!
                         </p>
-                        <Button><>Start now</></Button>
+                        <Button isLocalLink={true} to='/contact'><>Start now</></Button>
                     </div>
                     <img src={photo} alt="Photo" className={styles.photo} />
                 </div>
