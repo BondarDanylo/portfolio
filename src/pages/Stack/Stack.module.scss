@@ -1,0 +1,69 @@
+@import '../../variables/variables.scss';
+
+.list {
+    margin-top: 100px;
+    max-height: 400px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+    &::-webkit-scrollbar {
+        background: $white_color;
+        border-radius: $small_border_radius;
+    }
+    &::-webkit-scrollbar-thumb {
+        border: 2px solid $white_color;
+        background-color: $main_color;
+        border-radius: $small_border_radius;
+    }
+
+    &__item {
+        position: relative;
+        margin-right: 30px;
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+    &__text {
+        width: 100%;
+        border-radius: $small_border_radius;
+        background-color: $main_color;
+        font-size: $big_text_size;
+        font-weight: 500;
+        padding: 16px 0 15px 80px;
+        height: 55px;
+    }
+}
+.circle {
+    position: absolute;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    background-color: $black_color;
+    border-radius: 50%;
+    left: -10px;
+}
+.count {
+    background-color: $white_color;
+    width: 55px;
+    height: 55px;
+    color: $black_color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: $large_text_size;
+    font-weight: 600;
+}
+
+// Media Queries 
+@media screen and (max-width: 575px) {
+    .list__text {
+        font-size: $normal_text_size;
+    }
+}

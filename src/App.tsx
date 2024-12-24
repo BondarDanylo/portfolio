@@ -4,6 +4,7 @@ import styles from './App.module.scss';
 import Navigation from './components/Navigation/Navigation';
 import Home from './pages/Home/Home';
 import Portfolio from './pages/Portfolio/Portfolio';
+import Stack from './pages/Stack/Stack';
 
 const App: FC = (): JSX.Element => {
   return (
@@ -14,6 +15,7 @@ const App: FC = (): JSX.Element => {
             <Route index element={<Home />} />
           </Route>
           <Route path='/portfolio' element={<Portfolio />} />
+          <Route path='/stack' element={<Stack />} />
         </Routes>
     </div>
   )
