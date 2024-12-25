@@ -1,4 +1,4 @@
-import React, { FC, JSX } from "react";
+import { FC, JSX } from "react";
 import NavigationLink from "../NavigationLink/NavigationLink";
 import styles from './Navigation.module.scss';
 

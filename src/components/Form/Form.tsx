@@ -1,3 +1,4 @@
+import axios from "axios";
 import { ChangeEvent, FC, JSX, useState } from "react";
 import IFormItem from "../../interfaces/IFormItem";
 import Button from "../Button/Button";
@@ -6,7 +7,7 @@ import styles from './Form.module.scss';
 
 const Form: FC<IForm> = ({status}): JSX.Element => {
 
-    const [formState, setFormState] = useState<Array<IFormItem>>([
+    const inicialState:Array<IFormItem> = [
         {
             type: 'text',
             name: 'Name',
@@ -28,7 +29,9 @@ const Form: FC<IForm> = ({status}): JSX.Element => {
             itemType: 'textarea',
             value: '',
         },
-    ])
+    ]
+
+    const [formState, setFormState] = useState<Array<IFormItem>>(inicialState)
 
     const handleChange = (e:ChangeEvent<HTMLInputElement>): void => {
         const value = e.target.value
@@ -56,7 +59,16 @@ const Form: FC<IForm> = ({status}): JSX.Element => {
         \n <b>Email:</b> ${responseArray[1]} 
         \n <b>Message:</b> ${responseArray[2]}`
 
-       status((prev:boolean): boolean => !prev)
+        axios.post(URL_API, {
+            chat_id: CHAT_ID,
+            parse_mode: 'html',
+            text: message,
+        })
+        .then(res => {
+            status((prev:boolean): boolean => !prev)
+            setFormState(inicialState)
+        })
+
         
     }
     
