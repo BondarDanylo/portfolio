@@ -63,6 +63,9 @@
 
 // Media Queries 
 @media screen and (max-width: 575px) {
+    .list {
+        margin-top: 30px;
+    }
     .list__text {
         font-size: $normal_text_size;
     }

@@ -1,11 +1,12 @@
 @import '../../variables/variables.scss';
 
 .button {
+    cursor: pointer;
     color: $black_color;
     background-color: $main_color;
     border-radius: $small_border_radius;
     border: 2px solid $black_color;
-    padding: 10px 20px;
+    padding: 15px 20px;
     font-family: inherit;
     font-weight: 700;
     font-size: $big_text_size;

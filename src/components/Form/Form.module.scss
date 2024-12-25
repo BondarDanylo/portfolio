@@ -1,0 +1,11 @@
+.form {
+    width: 400px;
+    margin-right: 30px;
+}
+
+// Media Queries 
+@media screen and (max-width: 992px) {
+    .form {
+        width: 100%;
+    }
+}

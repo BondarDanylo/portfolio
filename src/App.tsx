@@ -2,6 +2,7 @@ import { FC, JSX } from 'react';
 import { Route, Routes } from 'react-router';
 import styles from './App.module.scss';
 import Navigation from './components/Navigation/Navigation';
+import Contact from './pages/Contact/Contact';
 import Home from './pages/Home/Home';
 import Portfolio from './pages/Portfolio/Portfolio';
 import Stack from './pages/Stack/Stack';
@@ -16,6 +17,7 @@ const App: FC = (): JSX.Element => {
           </Route>
           <Route path='/portfolio' element={<Portfolio />} />
           <Route path='/stack' element={<Stack />} />
+          <Route path='/contact' element={<Contact />} />
         </Routes>
     </div>
   )

@@ -50,7 +50,7 @@ const Portfolio: FC = (): JSX.Element => {
                 </h1>
                 <Projects activeProject={activeProject} setActiveProject={setActiveProject} projects={projects} />
 
-                <Button isLocalLink={false} link={activeProject.link}>
+                <Button type={'a'} link={activeProject.link}>
                     <>Demo</>
                 </Button>
             </section>

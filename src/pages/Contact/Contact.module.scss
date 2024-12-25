@@ -1,0 +1,46 @@
+@import '../../variables/variables.scss';
+
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+.text {
+    margin-top: 30px;
+    & h1 {
+        margin-bottom: 50px;
+    }
+}
+.subtitle {
+    margin-top: 30px;
+    display: block;
+    max-width: 500px;
+    font-size: $normal_text_size;
+}
+
+// Media Queries
+@media screen and (max-width: 992px) {
+    .wrapper {
+        flex-direction: column;
+    }
+    .text {
+        order: 1;
+        margin-bottom: 20px;
+        & h1 {
+            text-align: left;
+            margin-bottom: 30px;
+        }
+    }
+    form {
+        order: 2;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .text  {
+        margin-bottom: 10px;
+    }
+    .subtitle {
+        margin-top: 20px;
+    }
+}

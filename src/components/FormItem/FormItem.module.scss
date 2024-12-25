@@ -1,0 +1,31 @@
+@import '../../variables/variables.scss';
+
+.label {
+    display: block;
+    font-size: $large_text_size;
+    color: $white_color;
+    margin: 30px 0;
+}
+.input, .textarea {
+    width: 100%;
+    resize: none;
+    outline: none;
+    border-radius: $small_border_radius;
+    background-color: $black_color;
+    border: 2px solid $main_color;
+    padding: 10px;
+    font-family: inherit;
+    font-size: $big_text_size;
+    color: $white_color;
+}
+
+// Media Queries 
+@media screen and (max-width: 575px) {
+    .label {
+        font-size: $big_text_size;
+        margin: 20px 0;
+    }
+    .input, .textarea {
+        font-size: $normal_text_size;
+    }
+}
