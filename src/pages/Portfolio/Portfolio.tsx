@@ -28,14 +28,14 @@ const Portfolio: FC = (): JSX.Element => {
         {
             id: 3,
             active: false,
-            link: 'http://project3.danylobondar.site/',
+            link: 'http://project2.danylobondar.site/',
             image: project3,
             title: 'Jell',
         },
         {
             id: 4,
             active: false,
-            link: 'http://project1.danylobondar.site/',
+            link: 'http://project3.danylobondar.site/',
             image: project4,
             title: 'Quiz',
         },
